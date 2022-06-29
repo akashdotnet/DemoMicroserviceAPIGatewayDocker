@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman collection", "Postm
 		Demo Microservice Architecture.postman_collection.json = Demo Microservice Architecture.postman_collection.json
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobProject", "..\..\..\Desktop\AzureBlobProject\AzureBlobProject.csproj", "{39E71581-DB9D-4E6D-A31D-53548DAF639A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{525B01F0-F20A-4AFC-852E-BBB9AF95A3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{525B01F0-F20A-4AFC-852E-BBB9AF95A3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{525B01F0-F20A-4AFC-852E-BBB9AF95A3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E71581-DB9D-4E6D-A31D-53548DAF639A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E71581-DB9D-4E6D-A31D-53548DAF639A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E71581-DB9D-4E6D-A31D-53548DAF639A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E71581-DB9D-4E6D-A31D-53548DAF639A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{3BD63280-F9EB-4978-AE5A-3324BFD7C143} = {EE2C0224-8662-49A2-9F66-ED47B9BFBB2D}
 		{BDDC7CB5-D948-42D3-92AD-CDC8B4DD65BB} = {BF2E0098-3F2F-43FD-80D4-108EE255EC68}
 		{525B01F0-F20A-4AFC-852E-BBB9AF95A3C2} = {468E4048-7FBE-409D-8C04-47878E3F1733}
+		{39E71581-DB9D-4E6D-A31D-53548DAF639A} = {468E4048-7FBE-409D-8C04-47878E3F1733}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DE9B6CB-0BEA-4BFB-8CD6-9928D54BB4DA}
