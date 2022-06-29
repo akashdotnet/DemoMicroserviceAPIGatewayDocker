@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "bf98d6a3-0d8e-4b24-854a-35a7a275e4bb",
+		"name": "Demo Microservice Architecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10620124"
+	},
+	"item": [
+		{
+			"name": "CustomerAPI",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5207/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5207/api/customer/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Singh\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5207/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5207/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5207/api/customer/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docker ProductAPI",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{product_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{product_port_number}}/api/product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductCode\": \"001\",\r\n    \"ProductName\": \"Gas\",\r\n    \"ProductPrice\": \"100\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{product_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{product_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{product_port_number}}/api/product/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docker CustomerAPI",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{customer_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Read By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{customer_port_number}}/api/customer/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Singh\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{customer_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{customer_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{customer_port_number}}/api/customer/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductAPI",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:55788/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:55788/api/product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductCode\": \"001\",\r\n    \"ProductName\": \"Gas\",\r\n    \"ProductPrice\": \"100\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:55788/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:55788/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:55788/api/product/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderAPI",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5133/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5133/api/order/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OrderId\": \"\",\r\n    \"ProductId\": 10,\r\n    \"OrderedOn\": \"2022-05-01T01:00:00Z\",\r\n    \"OrderDetails\":[\r\n        {\r\n            \"ProductId\":2,\r\n            \"Quantity\":2,\r\n            \"UnitPrice\":123\r\n        },\r\n        {\r\n            \"ProductId\":3,\r\n            \"Quantity\":5,\r\n            \"UnitPrice\":193\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5133/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5133/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5133/api/order/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docker OrderAPI",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{order_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{order_port_number}}/api/order/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OrderId\": \"\",\r\n    \"ProductId\": 10,\r\n    \"OrderedOn\": \"2022-05-01T01:00:00Z\",\r\n    \"OrderDetails\":[\r\n        {\r\n            \"ProductId\":2,\r\n            \"Quantity\":2,\r\n            \"UnitPrice\":123\r\n        },\r\n        {\r\n            \"ProductId\":3,\r\n            \"Quantity\":5,\r\n            \"UnitPrice\":193\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{order_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{order_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{order_port_number}}/api/order/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Api Gateway",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Get CustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/customer/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\",\r\n    \"CustomerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/customer/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Api Gateway",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Akash Gupta\",\r\n    \"MobileNumber\": \"1265792345\",\r\n    \"EMail\": \"Akash.singh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"productId\": 1,\r\n        \"productName\": \"Gas 1\",\r\n        \"productCode\": \"001\",\r\n        \"productPrice\": 100.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/product/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Api Gateway Copy",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": 10,\r\n    \"OrderedOn\": \"2022-05-01T01:00:00Z\",\r\n    \"OrderDetails\":[\r\n        {\r\n            \"ProductId\":2,\r\n            \"Quantity\":2,\r\n            \"UnitPrice\":123\r\n        },\r\n        {\r\n            \"ProductId\":3,\r\n            \"Quantity\":5,\r\n            \"UnitPrice\":193\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/order/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OrderId\": \"\",\r\n    \"ProductId\": 10,\r\n    \"OrderedOn\": \"2022-05-01T01:00:00Z\",\r\n    \"OrderDetails\":[\r\n        {\r\n            \"ProductId\":2,\r\n            \"Quantity\":2,\r\n            \"UnitPrice\":123\r\n        },\r\n        {\r\n            \"ProductId\":3,\r\n            \"Quantity\":5,\r\n            \"UnitPrice\":193\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:{{apigateway_port_number}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:{{apigateway_port_number}}/api/order/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
