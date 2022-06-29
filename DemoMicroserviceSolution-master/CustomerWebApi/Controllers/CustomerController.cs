@@ -1,6 +1,8 @@
 ﻿using CustomerWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace CustomerWebApi.Controllers
 {
@@ -8,17 +10,39 @@ namespace CustomerWebApi.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly CustomerDbContext _customerDbContext;
-
-        public CustomerController(CustomerDbContext customerDbContext)
+        private readonly ILogger<CustomerController> _logger;
+        private readonly IDistributedCache _cache;
+        public CustomerController(ILogger<CustomerController> logger,
+            IDistributedCache cache,
+            CustomerDbContext db)
         {
-            _customerDbContext = customerDbContext;
+            _logger = logger;
+            _customerDbContext = db;
+            _cache = cache;
         }
+        private readonly CustomerDbContext _customerDbContext;
 
         [HttpGet]
         public ActionResult<IEnumerable<Customer>> GetCustomers()
         {
-            return _customerDbContext.Customers;
+            List<Customer> customerList = new();
+            var cachedCustomer = _cache.GetString("customerList");
+            if (!string.IsNullOrEmpty(cachedCustomer))
+            {
+                //cache
+                #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                                customerList = JsonConvert.DeserializeObject<List<Customer>>(cachedCustomer);
+                #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+            }
+            else
+            {
+                customerList = _customerDbContext.Customers.ToList();
+                DistributedCacheEntryOptions options = new();
+                options.SetAbsoluteExpiration(new TimeSpan(0, 0, 30));
+
+                _cache.SetString("customerList", JsonConvert.SerializeObject(customerList), options);
+            }
+            return customerList;
         }
 
         [HttpGet("{customerId:int}")]

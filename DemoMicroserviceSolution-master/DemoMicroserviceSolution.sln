@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Import", "Import", "{468E40
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIleUploadFunction", "..\FIleUploadFunction\FIleUploadFunction.csproj", "{525B01F0-F20A-4AFC-852E-BBB9AF95A3C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman collection", "Postman collection", "{A320A927-DEAF-46E3-B849-09AEB1CEC57B}"
+	ProjectSection(SolutionItems) = preProject
+		Demo Microservice Architecture.postman_collection.json = Demo Microservice Architecture.postman_collection.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

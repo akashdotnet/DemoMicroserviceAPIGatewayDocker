@@ -13,6 +13,11 @@ var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
 var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword}";
 builder.Services.AddDbContext<CustomerDbContext>(opt => opt.UseSqlServer(connectionString));
+
+builder.Services.AddDistributedRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("AzureRedisConnection");
+});
 /* ===================================== */
 
 var app = builder.Build();
